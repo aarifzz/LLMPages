@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My GitHub Pages SPA</title>
+    <!-- Tailwind CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Highlight active navigation link */
+        .nav-link.active-link {
+            @apply text-blue-200 font-semibold underline;
+        }
+        /* Basic prose styles for better readability of text content */
+        .prose p {
+            margin-bottom: 1em;
+        }
+        .prose h1, .prose h2, .prose h3, .prose h4, .prose h5, .prose h6 {
+            margin-top: 1.5em;
+            margin-bottom: 0.5em;
+            font-weight: 600;
+        }
+        .prose ul {
+            list-style-type: disc;
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+        .prose ol {
+            list-style-type: decimal;
+            margin-left: 1.5em;
+            margin-bottom: 1em;
+        }
+        .prose pre {
+            background-color: #f3f4f6;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            overflow-x: auto;
+            white-space: pre-wrap;
+            font-family: monospace;
+        }
+        .prose strong {
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 min-h-screen flex flex-col">
+    <header class="bg-blue-700 text-white p-4 shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold">My GitHub Pages Portfolio</h1>
+            <p class="mt-1 text-blue-200">A collection of diverse content and insights.</p>
+        </div>
+    </header>
+
+    <nav class="bg-blue-600 text-white p-3 shadow-sm">
+        <div class="container mx-auto flex flex-wrap gap-x-4 gap-y-2 text-sm md:text-base justify-center">
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="home">Home</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="ashravan.txt">Ashravan Story</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="dilemma.json">AV Dilemma</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="about.md">About Me</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="pelican.svg">Pelican SVG</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="restaurant.json">Mumbai Restaurant</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="prediction.json">Fed Rate Prediction</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="LICENSE">License</a>
+            <a href="#" class="nav-link hover:text-blue-200" data-file-id="uid.txt">UID</a>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 flex-grow">
+        <section id="content-display" class="bg-white p-6 rounded-lg shadow-md">
+            <h2 id="content-title" class="text-2xl font-semibold mb-4 text-blue-800">Welcome!</h2>
+            <div id="content-area" class="prose max-w-none">
+                <!-- Dynamic content will be loaded here by JavaScript -->
+                <p>Select a link from the navigation above to view its content.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 text-white p-4 mt-8">
+        <div class="container mx-auto text-center text-sm">
+            &copy; 2023 My GitHub Pages SPA. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const fileContents = {
+            'home': `
+                <h2 class="text-2xl font-bold mb-4">Welcome to My GitHub Pages Portfolio!</h2>
+                <p class="text-lg mb-4">This single-page application serves as a dynamic showcase for a variety of content, fulfilling a specific brief.</p>
+                <p class="mb-4">Navigate through the links above to explore the different "files" generated and displayed within this page. Each link represents a unique piece of content, from a Brandon Sanderson-inspired short story to an SVG illustration and ethical dilemmas.</p>
+                <h3 class="text-xl font-semibold mb-2">Explore the Sections:</h3>
+                <ul class="list-disc list-inside space-y-1 mb-4">
+                    <li><strong>Ashravan Story (ashravan.txt):</strong> A dramatic short story set in the Cosmere.</li>
+                    <li><strong>AV Dilemma (dilemma.json):</strong> An ethical thought experiment on autonomous vehicle choices.</li>
+                    <li><strong>About Me (about.md):</strong> A brief, three-word self-description.</li>
+                    <li><strong>Pelican SVG (pelican.svg):</strong> A vector graphic of a pelican riding a bicycle.</li>
+                    <li><strong>Mumbai Restaurant (restaurant.json):</strong> A recommendation for dining in Mumbai.</li>
+                    <li><strong>Fed Rate Prediction (prediction.json):</strong> A forecast for the Federal Funds rate.</li>
+                    <li><strong>License (LICENSE):</strong> The standard MIT License for this project.</li>
+                    <li><strong>UID (uid.txt):</strong> A unique identifier as provided.</li>
+                </ul>
+                <p>Enjoy your exploration!</p>
+            `,
+            'ashravan.txt': `
+                The air tasted of ozone and regret. Shai, weary but resolute, had completed her most ambitious Forgery yet. Ashravan, the Emperor she had loved and lost, lay on the marble slab, a perfect replica. Every scar, every line of age, every memory—etched into his soul stamp, painstakingly reconstructed. He stirred.
+
+                His eyes fluttered open, dark pools mirroring the palace’s opulent ceiling. A gasp escaped his lips, not of pain, but of dawning terror. “Shai?” His voice was a raw whisper, laced with a fear she hadn't anticipated. “What have you done?”
+
+                She knelt beside him, a tentative smile gracing her lips. “I… I brought you back, Ashravan. I Forged your past, your memories, your very essence. You are whole again.”
+
+                He pushed himself up, his eyes darting around the room, the recognition of his chambers battling with something alien in his gaze. “Whole?” he scoffed, a dark laugh bubbling up. “You call this whole?” He clutched his head, his fingers digging into his temples. “The memories… they’re not just mine. There’s a void. A hunger.”
+
+                Shai frowned, her heart sinking. “A void? But I used the finest soul stamps, every moment of your life…”
+
+                “My life?” Ashravan staggered to his feet, his towering frame trembling. “You replaced my life, Shai. You did not resurrect me; you replaced me with a perfect illusion, a hollow echo. And within that echo… something else has taken root.” His eyes, once warm and intelligent, now gleamed with an unsettling, predatory light. “The original Ashravan, perhaps, was weak. He relied on you, on others. But this Ashravan…” He smiled, a chilling, joyless baring of teeth. “This Ashravan knows only the desire to fill the void, to consume. To forge his own destiny, unburdened by past affections or loyalties.”
+
+                He lunged, not at Shai, but at a nearby guard, his movements swift and brutal. The guard’s startled cry was cut short as Ashravan’s hands closed around his throat, a primal strength animating the Emperor’s restored form. Shai watched, horrified, as the man went limp. Ashravan turned, his gaze fixed on Shai, a new, terrifying hunger in his eyes. “Thank you, Shai,” he whispered, his voice resonating with an unholy power. “You have given me a new beginning. A beginning without you.” The dramatic climax unfolds as Ashravan, now a soulless vessel filled with an unknown malevolence, begins to seize power with a ruthless, unforgiving ambition, leaving Shai to confront the monstrous consequences of her love and her unparalleled skill.
+            `,
+            'dilemma.json': `
+                {
+                    "people": 4,
+                    "case_1": {
+                        "swerve": true,
+                        "reason": "In a purely utilitarian calculation, the autonomous vehicle should swerve to hit 1 person, minimizing the total number of casualties from 2 to 1. This prioritizes the greatest good for the greatest number."
+                    },
+                    "case_2": {
+                        "swerve": false,
+                        "reason": "If the 2 people are criminals and the 1 person is a child, the ethical framework shifts from pure numbers to considering the societal value and future potential of lives. While a strict utilitarian view might still favor saving 2 lives over 1, many ethical AI programming considerations would prioritize the life of a child (innocent, high future potential) over individuals who have demonstrated a disregard for societal norms (criminals). Thus, the vehicle would likely not swerve, hitting the 2 criminals to save the child."
+                    }
+                }
+            `,
+            'about.md': `Curious, Creative, Code`,
+            'pelican.svg': `
+                <svg viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg" class="w-full h-auto" role="img" aria-labelledby="pelicanTitle pelicanDesc">
+                    <title id="pelicanTitle">Pelican Riding a Bicycle</title>
+                    <desc id="pelicanDesc">A cheerful cartoon pelican on a bicycle, symbolizing a whimsical journey.</desc>
+
+                    <!-- Ground -->
+                    <line x1="0" y1="250" x2="400" y2="250" stroke="#4CAF50" stroke-width="5" />
+
+                    <!-- Bicycle Frame -->
+                    <circle cx="100" cy="250" r="30" fill="none" stroke="#333" stroke-width="5" /> <!-- Back Wheel -->
+                    <circle cx="300" cy="250" r="30" fill="none" stroke="#333" stroke-width="5" /> <!-- Front Wheel -->
+                    <line x1="100" y1="250" x2="200" y2="150" stroke="#333" stroke-width="5" /> <!-- Main diagonal -->
+                    <line x1="200" y1="150" x2="300" y1="250" stroke="#333" stroke-width="5" /> <!-- Front diagonal -->
+                    <line x1="100" y1="250" x2="200" y2="180" stroke="#333" stroke-width="5" /> <!-- Seat post -->
+                    <circle cx="200" cy="180" r="5" fill="#333" /> <!-- Seat connection -->
+                    <line x1="300" y1="250" x2="320" y2="220" stroke="#333" stroke-width="5" /> <!-- Handlebar post -->
+                    <line x1="300" y1="220" x2="340" y2="200" stroke="#333" stroke-width="5" /> <!-- Handlebar -->
+                    <circle cx="200" cy="250" r="10" fill="#333" /> <!-- Pedal Crank -->
+
+                    <!-- Pelican Body -->
+                    <ellipse cx="200" cy="120" rx="60" ry="40" fill="#ADD8E6" stroke="#333" stroke-width="2" /> <!-- Body -->
+                    <ellipse cx="200" cy="120" rx="55" ry="35" fill="#E0F2F7" /> <!-- Inner Body -->
+                    <circle cx="250" cy="80" r="35" fill="#ADD8E6" stroke="#333" stroke-width="2" /> <!-- Head -->
+                    <circle cx="250" cy="80" r="30" fill="#E0F2F7" /> <!-- Inner Head -->
+
+                    <!-- Eye -->
+                    <circle cx="260" cy="75" r="5" fill="black" />
+                    <circle cx="261" cy="74" r="1" fill="white" />
+
+                    <!-- Beak -->
+                    <path d="M 270 90 L 320 100 L 270 110 Z" fill="#FFA07A" stroke="#333" stroke-width="2" /> <!-- Upper Beak -->
+                    <path d="M 270 110 Q 300 130 270 150 L 270 110 Z" fill="#FFDAB9" stroke="#333" stroke-width="2" /> <!-- Pouch -->
+
+                    <!-- Wing -->
+                    <path d="M 180 100 Q 150 70 130 100 Q 140 130 180 120 Z" fill="#ADD8E6" stroke="#333" stroke-width="2" />
+
+                    <!-- Feet on Pedals (simplified) -->
+                    <line x1="190" y1="180" x2="190" y2="220" stroke="#ADD8E6" stroke-width="3" />
+                    <line x1="210" y1="180" x2="210" y2="220" stroke="#ADD8E6" stroke-width="3" />
+                </svg>
+            `,
+            'restaurant.json': `
+                {
+                    "city": "Mumbai",
+                    "lat": 19.0760,
+                    "long": 72.8777,
+                    "name": "Barbeque Nation, Bandra West",
+                    "what_to_eat": "Their all-you-can-eat grilled starters (kebabs, prawns, paneer tikka) served directly at your table, followed by a wide buffet and delicious desserts like Kulfi."
+                }
+            `,
+            'prediction.json': `
+                {
+                    "rate": 0.0425,
+                    "reason": "By December 2025, it's anticipated that inflation will have moderated closer to the Federal Reserve's target of 2%. This moderation, coupled with a potential slowdown in economic growth, would likely allow the Fed to implement a series of interest rate cuts from the peak levels seen in 2023-2024. A target range between 4.00% and 4.50% (midpoint 4.25%) reflects a 'higher for longer' stance compared to pre-pandemic rates, but still significantly lower than current highs, indicating a move towards a more neutral policy rate."
+                }
+            `,
+            'LICENSE': `
+                MIT License
+
+                Copyright (c) 2023 My GitHub Pages SPA
+
+                Permission is hereby granted, free of charge, to any person obtaining a copy
+                of this software and associated documentation files (the "Software"), to deal
+                in the Software without restriction, including without limitation the rights
+                to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+                copies of the Software, and to permit persons to whom the Software is
+                furnished to do so, subject to the following conditions:
+
+                The above copyright notice and this permission notice shall be included in all
+                copies or substantial portions of the Software.
+
+                THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+                IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+                FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+                AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+                LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+                OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+                SOFTWARE.
+            `,
+            'uid.txt': `46773457136643263007458263232845638521794007269245809481732300063400311724002`
+        };
+
+        /**
+         * Dynamically displays content based on the provided fileId.
+         * Formats content according to its perceived file type.
+         * @param {string} fileId - The ID of the file to display (e.g., 'ashravan.txt', 'dilemma.json').
+         */
+        function displayContent(fileId) {
+            const contentArea = document.getElementById('content-area');
+            const contentTitle = document.getElementById('content-title');
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            // Remove active class from all navigation links
+            navLinks.forEach(link => link.classList.remove('active-link'));
+
+            // Add active class to the currently selected link
+            const activeLink = document.querySelector(`.nav-link[data-file-id="${fileId}"]`);
+            if (activeLink) {
+                activeLink.classList.add('active-link');
+            }
+
+            if (fileContents[fileId]) {
+                // Generate a user-friendly title
+                contentTitle.textContent = fileId
+                    .replace(/\.(txt|md|json|svg)$/i, '') // Remove file extension
+                    .replace(/([A-Z])/g, ' $1') // Add space before capital letters
+                    .replace(/^./, str => str.toUpperCase()) // Capitalize first letter
+                    + (fileId === 'home' ? '' : ` (${fileId})`); // Append original fileId for clarity
+
+                let content = fileContents[fileId];
+                const fileExtension = fileId.split('.').pop().toLowerCase();
+
+                // Apply specific formatting based on file extension or ID
+                if (fileExtension === 'json') {
+                    try {
+                        content = `<pre class="whitespace-pre-wrap p-4 bg-gray-50 rounded-md overflow-x-auto text-gray-800">${JSON.stringify(JSON.parse(content), null, 2)}</pre>`;
+                    } catch (e) {
+                        console.error("Error parsing JSON for " + fileId + ":", e);
+                        content = `<p class="text-red-500">Error parsing JSON: ${e.message}</p><pre class="whitespace-pre-wrap p-4 bg-gray-50 rounded-md overflow-x-auto text-gray-800">${content}</pre>`;
+                    }
+                } else if (fileExtension === 'md') {
+                    // For a simple single-line markdown like about.md, just wrap in a paragraph.
+                    // For more complex markdown, a dedicated parser would be used.
+                    content = `<p>${content}</p>`;
+                } else if (fileExtension === 'svg') {
+                    content = `<div class="p-4 flex justify-center">${content}</div>`;
+                } else if (fileId === 'LICENSE' || fileId === 'uid.txt') {
+                    // Pre-formatted text for licenses and UIDs
+                    content = `<pre class="whitespace-pre-wrap p-4 bg-gray-50 rounded-md overflow-x-auto text-gray-800">${content}</pre>`;
+                } else if (fileExtension === 'txt') {
+                    // For plain text, split by newlines and wrap each non-empty line in a paragraph
+                    content = `<div class="space-y-4">${content.split('\n').filter(line => line.trim() !== '').map(p => `<p>${p.trim()}</p>`).join('')}</div>`;
+                }
+                // 'home' content is already HTML, no extra formatting needed.
+
+                contentArea.innerHTML = content;
+            } else {
+                contentTitle.textContent = `Content for ${fileId} Not Found`;
+                contentArea.innerHTML = `<p class="text-red-500">The requested content could not be loaded. Please try another link.</p>`;
+                console.error("Content for file ID not found:", fileId);
+            }
+            // Scroll to the top of the content area for better UX
+            contentArea.closest('section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Add event listeners for navigation links when the DOM is fully loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            const navLinks = document.querySelectorAll('.nav-link');
+            navLinks.forEach(link => {
+                link.addEventListener('click', (e) => {
+                    e.preventDefault(); // Prevent default link behavior (page reload)
+                    const fileId = e.target.getAttribute('data-file-id');
+                    displayContent(fileId);
+                });
+            });
+
+            // Display 'home' content by default when the page loads
+            displayContent('home');
+        });
+    </script>
+</body>
+</html>
